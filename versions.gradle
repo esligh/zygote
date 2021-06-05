@@ -18,7 +18,7 @@ app_plugins.mobsdk = 'com.mob.sdk'
 ext.app_plugins = app_plugins
 
 def versions = [:]
-versions.android_gradle_plugin = "4.1.1"
+versions.android_gradle_plugin = "4.0.0"
 versions.doraemonKit = '3.1.2'
 versions.andResGuard = '1.2.18'
 versions.kotlin = "1.3.50"
