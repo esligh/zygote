@@ -1,0 +1,15 @@
+apply plugin: app_plugins.library
+apply from:'../fun_deps.gradle'
+
+android{
+
+    resourcePrefix 'module_fun_photo'
+}
+
+dependencies {
+    api deps.luban
+    api deps.bga_qrcode_zxing
+    api deps.bga_photo_picker
+    api deps.bga_qrcode_zbar
+
+}

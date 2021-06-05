@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/module_socialize_dialog_top_corner_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50">
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/module_socialize_custom_text_color"
+                android:text="@string/module_fun_socialize_share_to"/>
+
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/shareGridList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_marginLeft="@dimen/dp_25"
+            android:layout_marginRight="@dimen/dp_25"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:divider="@drawable/module_socialize_divider_color"
+            android:listSelector="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/module_socialize_divider_color"/>
+
+        <TextView
+            android:id="@+id/cancelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_48"
+            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:textColor="@color/module_socialize_custom_text_color"
+            android:text="@string/module_fun_socialize_btn_cancel"/>
+    </LinearLayout>
+
+</LinearLayout>

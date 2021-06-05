@@ -1,0 +1,31 @@
+//通用基础组件：
+include ':base_tools'
+
+//基础组件
+include ':module_main'
+include ':lib_config'
+include ':lib_ui'
+include ':lib_common'
+include ':lib_tools'
+
+//业务组件
+include ':bus_common'
+include ':bus_api'
+include ':bus_model'
+include ':bus_constant'
+include ':bus_ui'
+include ':bus_db'
+
+//功能组件
+include ':fun_photo'
+include ':fun_media'
+include ':fun_map'
+include ':fun_socialize'
+include ':fun_pay'
+
+//app组件
+include ':module_app'
+
+include ':libraries_aar:alipaySdk_aar'
+include ':libraries_aar:open_ad_aar'
+        

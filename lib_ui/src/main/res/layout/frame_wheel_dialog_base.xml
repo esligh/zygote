@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/frame_wheel_dialog_title_bar" />
+
+    <View android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/frame_divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/wheel_id_picker_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/wheel_picker_padding_left"
+        android:paddingTop="@dimen/wheel_picker_padding_top"
+        android:paddingEnd="@dimen/wheel_picker_padding_right"
+        android:paddingBottom="@dimen/wheel_picker_padding_bottom" />
+
+</LinearLayout>

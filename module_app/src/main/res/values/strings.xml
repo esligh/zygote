@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Zygote</string>
+    <string name="app_name_dev">Zygote Dev</string>
+    <string name="app_name_test">Zygote Test</string>
+    <string name="app_name_run">Zygote Accept</string>
+
+    <string name="global_scheme">module</string>
+
+    <!-- 崩溃 -->
+    <string name="crash_toast_text">程序崩溃了</string>
+    <string name="crash_dialog_text">感谢您对我们的支持！</string>
+    <string name="crash_dialog_title">发送崩溃日志</string>
+    <string name="crash_dialog_ok_toast">发送成功</string>
+
+    <string name="doraemon_kit_uuid">设备标识</string>
+</resources>

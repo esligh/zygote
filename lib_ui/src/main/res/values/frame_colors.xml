@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background_color">#FFFFFF</color>
+
+    <!--APP的主题色-->
+    <color name="colorPrimary">#F33945</color>
+    <color name="colorPrimaryDark">#F33945</color>
+    <color name="colorAccent">#F33945</color>
+
+    <color name="frame_page_bg_color">#f5f5f5</color>
+    <color name="frame_btn_normal_color">@color/colorPrimary</color>
+    <color name="frame_btn_disable_color">#80F33945</color>
+    <color name="frame_status_bar_color">#ffffff</color>
+    <color name="frame_toolbar_bg_color">#ffffff</color>
+    <color name="frame_toolbar_line_color">#f0f0f0</color>
+    <color name="frame_toolbar_text_color">#000000</color>
+    <color name="frame_btn_color">#f33945</color>
+
+    <!-- 主标题色和副标题色-->
+    <color name="frame_custom_text_color">#333333</color>
+    <color name="frame_sub_text_color">#999999</color>
+    <color name="frame_tips_color">#A1A1A1</color>
+    <color name="frame_divider_color">#f2f2f2</color>
+    <color name="frame_dlg_divider_color">#d2d3d5</color>
+    <drawable name="frame_divider_color">#e5e5e5</drawable>
+    <color name="frame_error_text_color">#ff0000</color>
+
+    <!--支付控件-->
+    <color name="frame_pay_transparent">#00000000</color>
+    <color name="frame_pay_white">#ffffff</color>
+    <color name="frame_pass_rect_divider">#c4c4c4</color>
+    <color name="frame_pass_input_method_bg">#e3e7ee</color>
+    <color name="frame_input_method_btn_pressed_color">#e5e5e5</color>
+
+    <color name="frame_date_widget_divider">#eeeeee</color>
+    <color name="frame_date_widget_mark_color">#cccccc</color>
+
+
+    <drawable name="frame_list_selector_color">#e5e5e5</drawable>
+</resources>

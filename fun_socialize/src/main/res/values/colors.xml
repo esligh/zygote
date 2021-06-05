@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="module_socialize_divider_color">#f7f7f7</color>
+    <drawable name="module_socialize_divider_color">#f7f7f7</drawable>
+    <color name="module_socialize_custom_text_color">#333333</color>
+</resources>

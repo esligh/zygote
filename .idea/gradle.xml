@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="testRunner" value="PLATFORM" />
+        <option name="distributionType" value="DEFAULT_WRAPPED" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="D:/Users/Administrator/.gradle/wrapper/dists/gradle-5.4.1-all" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/base_tools" />
+            <option value="$PROJECT_DIR$/bus_api" />
+            <option value="$PROJECT_DIR$/bus_common" />
+            <option value="$PROJECT_DIR$/bus_constant" />
+            <option value="$PROJECT_DIR$/bus_db" />
+            <option value="$PROJECT_DIR$/bus_model" />
+            <option value="$PROJECT_DIR$/bus_ui" />
+            <option value="$PROJECT_DIR$/fun_map" />
+            <option value="$PROJECT_DIR$/fun_media" />
+            <option value="$PROJECT_DIR$/fun_pay" />
+            <option value="$PROJECT_DIR$/fun_photo" />
+            <option value="$PROJECT_DIR$/fun_socialize" />
+            <option value="$PROJECT_DIR$/lib_common" />
+            <option value="$PROJECT_DIR$/lib_config" />
+            <option value="$PROJECT_DIR$/lib_tools" />
+            <option value="$PROJECT_DIR$/lib_ui" />
+            <option value="$PROJECT_DIR$/libraries_aar" />
+            <option value="$PROJECT_DIR$/libraries_aar/alipaySdk_aar" />
+            <option value="$PROJECT_DIR$/libraries_aar/open_ad_aar" />
+            <option value="$PROJECT_DIR$/module_app" />
+            <option value="$PROJECT_DIR$/module_main" />
+          </set>
+        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>

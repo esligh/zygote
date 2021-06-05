@@ -1,0 +1,63 @@
+apply plugin: app_plugins.library
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "String","SERVER_BASE_URL","\"https://dev.yunzhu.com.cn\""
+            buildConfigField "String", "URL_PREFIX", "\"/\""
+        }
+
+        check {
+            buildConfigField "String","SERVER_BASE_URL","\"https://test.yunzhu.com.cn\""
+            buildConfigField "String", "URL_PREFIX", "\"/tac\""
+        }
+
+        release {
+            buildConfigField "String","SERVER_BASE_URL","\"https://yunzhu.com.cn\""
+            buildConfigField "String", "URL_PREFIX", "\"\""
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api deps.support.app_compat
+    api deps.android_ktx
+    api deps.logger
+
+    // RxJava and retrofit
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.persistent_cookie
+    api deps.retrofit.convert_scalar
+    api deps.retrofit.convert_gson
+    api deps.utils
+
+    api project(':lib_config')
+    api project(':bus_constant')
+    api project(':bus_model')
+    api project(':base_tools')
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.test_runner
+    androidTestImplementation deps.test.espresso
+}

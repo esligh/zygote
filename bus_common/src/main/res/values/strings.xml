@@ -1,0 +1,16 @@
+<resources>
+
+    <string name="frame_scan_code">扫一扫</string>
+    <string name="frame_scan_code_tips">将二维码置于框内进行扫描</string>
+    <string name="frame_scan_bar_tips">将条码置于框内进行扫描</string>
+
+    <string name="frame_scan_light_on_tips">轻触点亮</string>
+    <string name="frame_scan_light_off_tips">轻触关闭</string>
+    <string name="frame_scan_photo_album">相册</string>
+    <string name="frame_warn_quit_foreground">已退至后台运行</string>
+    <string name="frame_list_item_no_more_tips">没有更多了</string>
+    <string name="frame_warm_tips">温馨提示</string>
+    <string name="frame_warm_tips_agree_btn">同意</string>
+    <string name="frame_warm_tips_disagree_btn">暂不同意，退出使用</string>
+
+</resources>

@@ -1,0 +1,47 @@
+apply plugin: app_plugins.library
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+apply plugin: app_plugins.kt_kapt
+
+android {
+    compileSdkVersion build_versions.target_sdk
+
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug{
+
+        }
+        
+        check{
+
+        }
+
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api deps.kotlin.stdlib
+    api deps.android_ktx
+    api deps.support.app_compat
+    api deps.gson
+    api project(':bus_model')
+    implementation "com.google.dagger:hilt-android:2.33-beta"
+
+
+}

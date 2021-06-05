@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--share element name-->
+    <string name="card_trade_home_transition">transition_home_trade</string>
+
+</resources>

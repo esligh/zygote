@@ -1,0 +1,109 @@
+apply plugin: app_plugins.library
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+
+apply plugin: app_plugins.kt_kapt
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug{
+
+        }
+        check{
+
+        }
+
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    api fileTree(include: ['*.jar','*.aar'], dir: 'libs')
+    // Support libraries
+    api deps.support.app_compat
+    api deps.android_ktx
+    api deps.support.v4
+    api deps.support.v13
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.recyclerview
+    api deps.constraint_layout
+    api deps.paging
+    api deps.lifecycle
+    api deps.autodispose
+    api deps.autodispose_android
+
+    //kotlin
+    api deps.kotlin.stdlib
+    api deps.kotlin.kotlin_android
+    api deps.kotlin.kotlin_core
+
+    // other
+    api deps.event_bus
+    api deps.gson
+    api deps.rxpermission
+    api deps.utils
+
+    //glide
+    api deps.glide
+    api deps.glide_okhttp
+    api deps.glide_annotations
+
+    api deps.rxpermission
+    api deps.bga_qrcode_zbar
+    api deps.bga_qrcode_zxing
+    api deps.bga_photo_picker
+
+    //view
+    api deps.photo_view
+    api deps.material_dialog
+    api deps.logger
+    api deps.toasty
+
+    //router
+    api deps.arouter_api
+    api deps.swipebackhelper
+
+    //tangram
+    api deps.tangram
+    api(deps.virtual_view) {
+        transitive = true
+    }
+    api(deps.ultraviewpager) {
+        transitive = true
+    }
+
+    api deps.lifecycle_viewmodel
+    api deps.commons_codec
+    api deps.rxbus
+    api deps.security
+    api deps.js_bridge
+
+    // RxJava and retrofit
+    api deps.retrofit.runtime
+    api deps.retrofit.gson
+    api deps.persistent_cookie
+    api deps.retrofit.convert_scalar
+    api deps.retrofit.convert_gson
+
+    api project(':lib_ui')
+    api project(':lib_config')
+    api project(':base_tools')
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.test_runner
+    androidTestImplementation deps.test.espresso
+}

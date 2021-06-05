@@ -1,0 +1,7 @@
+apply plugin: app_plugins.library
+apply from:'../fun_deps.gradle'
+
+android {
+
+    resourcePrefix 'module_fun_media'
+}

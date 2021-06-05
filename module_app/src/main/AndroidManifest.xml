@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yunzhu.module">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ZygoteApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_logo"
+        android:label="${app_name}"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="false"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,android:label">
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 华为刘海屏适配 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 小米刘海屏适配- -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+    </application>
+
+</manifest>

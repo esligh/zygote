@@ -1,0 +1,190 @@
+<resources>
+    <!--button-->
+    <string name="frame_btn_next">下一步</string>
+    <string name="frame_btn_cancel">取消</string>
+    <string name="frame_btn_confirm">确定</string>
+    <string name="frame_btn_add">添加</string>
+    <string name="frame_btn_go_add">去添加</string>
+    <string name="frame_btn_setting">设置</string>
+    <string name="frame_btn_go_setting">去设置</string>
+    <string name="frame_btn_go_real_name">去实名</string>
+    <string name="frame_btn_upload">上传</string>
+    <string name="frame_btn_retry">重试</string>
+    <string name="frame_btn_finish">完成</string>
+    <string name="frame_btn_return">返回</string>
+    <string name="frame_btn_get_sms_code">获取验证码</string>
+    <string name="frame_btn_verify">验证</string>
+    <string name="frame_btn_forget_pwd">忘记密码</string>
+    <string name="frame_btn_add_card">添加银行卡</string>
+    <string name="frame_btn_confirm_submit">确认并提交</string>
+    <string name="frame_btn_change_pay_card">换卡支付</string>
+    <string name="frame_btn_reg">注册</string>
+    <string name="frame_btn_go_reg">去注册</string>
+    <string name="frame_btn_login">登录</string>
+    <string name="frame_btn_go_login">去登录</string>
+    <string name="frame_btn_refuse">拒绝</string>
+    <string name="frame_btn_agree">同意</string>
+    <!--title-->
+    <string name="frame_title_warn">警告</string>
+
+
+    <string name="frame_wait_tips">请稍等...</string>
+    <string name="frame_loading_tips">玩命加载中...</string>
+    <string name="frame_login_now">正在登录...</string>
+    <string name="frame_forget_pwd">忘记密码</string>
+    <string name="frame_phone_number">手机号码</string>
+    <string name="frame_phone_number_hint">请输入手机号码</string>
+    <string name="frame_verify_code">验证码</string>
+    <string name="frame_verify_code_hint">请输入短信验证码</string>
+    <string name="frame_please_first_get_sms_code">请先获取短信验证码</string>
+    <string name="frame_please_input_phone_number">请输入手机号</string>
+    <string name="frame_phone_number_cannot_empty">手机号码不能为空</string>
+    <string name="frame_error_phone_number">手机号码格式不正确</string>
+    <string name="frame_error_tips_bank_card">银行卡号格式错误</string>
+
+    <string name="frame_please_input_sms_code">请输入短信验证码</string>
+    <string name="frame_error_sms_code">短信验证码不正确</string>
+    <string name="frame_get_sms_code_again">重新获取</string>
+
+    <string name="frame_set_pay_pwd_success">设置支付密码成功</string>
+    <string name="frame_mod_pay_pwd_success">修改支付密码成功</string>
+
+    <string name="frame_trade_status_wait">待付款</string>
+    <string name="frame_trade_status_success">交易成功</string>
+    <string name="frame_trade_status_failed">交易失败</string>
+    <string name="frame_trade_status_refund">已退款</string>
+    <string name="frame_trade_status_in_process">处理中</string>
+    <string name="frame_trade_status_close">交易关闭</string>
+    <string name="frame_trade_status_refund_success">退款成功</string>
+
+    <string name="frame_pre_pay_card">预付卡</string>
+    <string name="frame_pay_account">支付账户</string>
+    <string name="frame_bank_card">银行卡</string>
+    <string name="frame_merchant_account">商户账号</string>
+    <string name="frame_title_tips">提示</string>
+    <string name="frame_prompt">提示</string>
+
+    <string name="frame_load_failed">加载失败</string>
+    <string name="frame_load_failed_tips">点击屏幕重新加载</string>
+    <string name="frame_no_data">暂无数据</string>
+    <string name="frame_no_data_tips">请打开其他页面试试吧</string>
+    <string name="frame_load_tips">正在加载...</string>
+    <string name="frame_net_error">网络异常</string>
+
+    <string name="frame_recharge_status_success">充值成功</string>
+    <string name="frame_recharge_status_failed">充值失败</string>
+    <string name="frame_withdraw_status_success">提现成功</string>
+    <string name="frame_withdraw_status_failed">提现失败</string>
+    <string name="frame_recharge">充值</string>
+    <string name="frame_withdraw">提现</string>
+    <string name="frame_please_choose">请选择</string>
+
+    <string name="frame_unit_year">年</string>
+    <string name="frame_unit_month">月</string>
+    <string name="frame_unit_day">日</string>
+    <string name="frame_unit_money">元</string>
+
+    <string name="frame_please_input_amount">请输入金额</string>
+    <string name="frame_btn_search">搜索</string>
+
+    <string name="frame_no_pay_pwd_tips">您尚未设置支付密码，请完成支付密码设置</string>
+    <string name="frame_no_id_card_tips">您尚未核对身份证影印件，为了您的资金安全，请完成本人身份证影印件上传。</string>
+    <string name="frame_name_auth_tips">您尚未实名认证，为了您的资金安全，请先进行实名认证。</string>
+    <string name="frame_id_card_invalid_tips">您的身份证影印件已过期，为了您的资金安全，请重新上传身份证影印件。</string>
+
+    <string name="frame_verify_pwd_tips">请输入支付密码，以验证身份</string>
+    <string name="frame_verify_name">姓名</string>
+    <string name="frame_verify_name_hint">请输入姓名</string>
+    <string name="frame_verify_credential_number">证件号</string>
+    <string name="frame_verify_credential_number_hint">请输入证件号</string>
+    <string name="frame_verify_credential_type">证件类型</string>
+    <string name="frame_id_card">身份证号</string>
+    <string name="frame_id_card_hint">请输入身份证号</string>
+    <string name="frame_error_tips_id">身份证号格式错误!</string>
+    <string name="frame_verify_credential">验证本人身份</string>
+    <string name="frame_rebind_card_for_retrieve">重新绑定银行卡找回</string>
+    <string name="frame_bind_new_card_for_retrieve">绑定新卡找回</string>
+    <string name="frame_bind_new_card_for_retrieve_tips">请绑定持卡人的银行卡以找回密码</string>
+    <string name="frame_add_bank_card">添加银行卡</string>
+    <string name="frame_card_number">卡号</string>
+    <string name="frame_card_host">持卡人</string>
+    <string name="frame_collect_bank_info">填写银行卡信息</string>
+    <string name="frame_bind_card_create_account">绑卡开户</string>
+    <string name="frame_verify_phone">手机号</string>
+    <string name="frame_verify_phone_hint">请输入手机号</string>
+    <string name="frame_use_new_card">使用新卡</string>
+    <string name="frame_bank_card_phone">请输入银行卡预留手机号</string>
+    <string name="frame_credit_card_cvn2_hint">卡背面后3位</string>
+    <string name="frame_credit_card_date_hint">示例：02/17请输入0217</string>
+    <string name="frame_agree">同意</string>
+    <string name="frame_user_protocol">《用户协议》</string>
+    <string name="frame_verify_sms_hint">请输入验证码</string>
+    <string name="frame_get_sms_code">获取验证码</string>
+    <string name="frame_bank_card_list">银行卡列表</string>
+    <string name="frame_verify_card_hint">请输入卡号</string>
+
+    <string name="frame_bank_card_type_tips">银行卡类型</string>
+    <string name="frame_bank">银行</string>
+    <string name="frame_bank_card_type">卡类型</string>
+    <string name="frame_credit_card_cvn2">CVN2</string>
+    <string name="frame_credit_card_date">有效期</string>
+    <string name="frame_bank_card_limit">银行卡支付限额</string>
+
+    <string name="frame_single_limit_desc">单笔限额</string>
+    <string name="frame_day_limit_desc">每日限额</string>
+    <string name="frame_bank_card_detail">银行卡详情</string>
+
+    <string name="frame_unbind_card">解除绑定</string>
+    <string name="frame_input_pay_password">请输入支付密码</string>
+    <string name="frame_set_pwd">设置支付密码</string>
+    <string name="frame_set_new_pwd">设置新支付密码</string>
+    <string name="frame_confirm_new_pwd">确认新支付密码</string>
+    <string name="frame_confirm_pwd">确认支付密码</string>
+    <string name="frame_pwd_not_same">两次密码输入不一致</string>
+
+    <string name="frame_take_id_card">拍摄二代身份证</string>
+    <string name="frame_upload_id_card">上传身份证照片</string>
+    <string name="frame_id_card_head">身份证正面</string>
+    <string name="frame_id_card_tail">身份证背面</string>
+    <string name="frame_upload_card_successful">上传成功</string>
+
+    <string name="frame_take_photo">拍照</string>
+    <string name="frame_pick_image">从相册选择</string>
+    <string name="frame_modify_pwd">修改密码</string>
+    <string name="frame_error_tips_sms_code">验证码为6位数字</string>
+    <string name="frame_error_tips_cvn2">请输入信用卡背面后3位数字</string>
+    <string name="frame_error_tips_credit_date">有效日期格式错误</string>
+    <string name="frame_agree_protocol">请阅读并同意用户协议</string>
+
+    <string name="frame_start_download">开始下载</string>
+    <string name="frame_download_desc">版本更新</string>
+
+
+    <string name="frame_add_card_success">添加银行卡成功</string>
+    <string name="frame_add_card_success_desc">恭喜您，添加银行卡成功</string>
+
+    <string name="frame_choose_pay_card">选择支付方式</string>
+    <string name="frame_choose_bank_card">选择银行卡</string>
+    <string name="frame_balance">余额</string>
+    <string name="frame_pre_card">预付卡</string>
+
+    <string name="frame_pay_success">支付成功</string>
+    <string name="frame_pay_process">处理中</string>
+    <string name="frame_pay_fail">支付失败</string>
+
+    <string name="frame_module_balance_not_enough">银行卡可用余额不足(如信用卡则为可透支额度不足)，请核实后再试</string>
+
+    <string name="frame_check_update_mannually">检查更新</string>
+    <string name="frame_exit">退出</string>
+    <string name="frame_download_in_future">以后更新</string>
+    <string name="frame_lovely_update">立即更新</string>
+    <string name="frame_new_version_info">最新版本: V%1$s</string>
+    <string name="frame_new_version_risk_tip">您使用的版本过低，若不更新将无法使用</string>
+    <string name="frame_version_update">版本升级</string>
+    <string name="frame_version_latest_version">已是最新版本!</string>
+
+    <string name="frame_verify_sms_code">短信验证</string>
+    <string name="frame_env_dangerous_tips">当前支付环境有风险，请暂时停止交易</string>
+
+
+</resources>

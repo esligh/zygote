@@ -1,0 +1,10 @@
+<resources>
+    <string name="frame_http_error_server_exception">服务器出错啦</string>
+    <string name="frame_http_error_server_timeout">请求超时</string>
+    <string name="frame_http_error_request_exception">服务器出错啦</string>
+
+    <string name="frame_http_error_parse_error">解析错误</string>
+    <string name="frame_http_error_connect_error">连接失败</string>
+    <string name="frame_http_error_unknown">未知错误</string>
+
+</resources>

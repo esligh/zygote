@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.bingoogolapple.qrcode.zxing.ZXingView
+        android:id="@+id/zXingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="@string/frame_scan_bar_tips"
+        app:qrcv_barcodeRectHeight="@dimen/dp_120"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/colorPrimaryDark"
+        app:qrcv_cornerDisplayType="center"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@drawable/scan_icon_scanline"
+        app:qrcv_isAutoZoom="true"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="true"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowLocationPoint="true"
+        app:qrcv_isShowTipBackground="false"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="true"
+        app:qrcv_maskColor="#33000000"
+        app:qrcv_qrCodeTipText="@string/frame_scan_code_tips"
+        app:qrcv_rectWidth="@dimen/dp_250"
+        app:qrcv_scanLineColor="@color/colorPrimaryDark"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="0.5dp"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextSize="@dimen/sp_12"
+        app:qrcv_toolbarHeight="@dimen/frame_toolbar_height"
+        app:qrcv_verticalBias="0.5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <FrameLayout
+            android:id="@+id/toolbarLayout"
+            android:layout_width="match_parent"
+            android:fitsSystemWindows="true"
+            android:layout_height="@dimen/frame_toolbar_height">
+
+            <ImageView
+                android:id="@+id/toolbarBack"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_frame_return_white" />
+
+            <TextView
+                android:id="@+id/toolbarTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textSize="@dimen/frame_toolbar_title_text_size"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/photoAlbumTv"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginRight="@dimen/dp_20"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/frame_scan_photo_album"/>
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp_20">
+
+        <TextView
+            android:id="@+id/lightTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/ic_light_off"
+            android:drawablePadding="@dimen/dp_10"
+            android:layout_centerInParent="true"
+            android:text="@string/frame_scan_light_on_tips"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

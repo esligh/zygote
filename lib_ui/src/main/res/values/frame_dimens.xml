@@ -1,0 +1,31 @@
+<resources>
+
+    <dimen name="frame_toolbar_height">@dimen/dp_48</dimen>
+    <dimen name="frame_toolbar_line_height">0.8dip</dimen>
+    <dimen name="frame_toolbar_title_text_size">@dimen/dp_17</dimen>
+    <dimen name="frame_btn_text_size">@dimen/sp_17</dimen>
+    <dimen name="frame_btn_corner_size">@dimen/dp_25</dimen>
+    <dimen name="frame_btn_corner_small_size">@dimen/dp_8</dimen>
+    <dimen name="frame_edit_text_size">@dimen/sp_14</dimen>
+
+    <dimen name="frame_title_text_size">@dimen/sp_16</dimen>
+
+    <dimen name="frame_input_pwd_height">@dimen/dp_46</dimen>
+    <dimen name="frame_loading_dialog_size">@dimen/dp_50</dimen>
+
+    <!--font -->
+    <dimen name="frame_input_pwd_text_size">@dimen/sp_55</dimen>
+    <dimen name="frame_input_pwd_margin_top">@dimen/dp_m_6</dimen>
+    <dimen name="frame_pop_menu_text_size">@dimen/sp_14</dimen>
+    <dimen name="frame_tips_text_size">@dimen/sp_13</dimen>
+    <dimen name="frame_error_tips_text_size">@dimen/sp_13</dimen>
+    <dimen name="frame_custom_layout_padding">@dimen/dp_15</dimen>
+    <dimen name="frame_list_item_padding">@dimen/dp_12</dimen>
+    <dimen name="frame_custom_top_margin">@dimen/dp_10</dimen>
+    <dimen name="frame_custom_divider_height">0.8dip</dimen>
+
+    <dimen name="frame_custom_page_padding">@dimen/dp_16</dimen>
+
+    <dimen name="frame_pass_keyboard_height">@dimen/dp_58</dimen>
+    <dimen name="frame_pass_keyboard_header_height">@dimen/dp_35</dimen>
+</resources>

@@ -1,0 +1,153 @@
+apply plugin: app_plugins.application
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+apply plugin: app_plugins.kt_kapt
+apply plugin: app_plugins.mobsdk
+apply plugin: 'dagger.hilt.android.plugin'
+
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+def currentVersionCode = getVersionCode()
+android {
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.yunzhu.zygote"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode currentVersionCode
+        versionName "1.0.$currentVersionCode"
+        multiDexEnabled true
+        resValue "string", "build_time", buildTime()
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        release {
+            manifestPlaceholders = [
+                app_name: "@string/app_name"
+            ]
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //是否zip对齐
+            zipAlignEnabled true
+            // 缩减resource文件
+            shrinkResources true
+            //Proguard
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //签名
+            signingConfig signingConfigs.release
+        }
+
+        check {
+            applicationIdSuffix ".test"
+            manifestPlaceholders = [
+                app_name: "@string/app_name_test"
+            ]
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled true
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+            manifestPlaceholders = [
+                app_name: "@string/app_name_dev"
+            ]
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            zipAlignEnabled false
+            shrinkResources false
+            minifyEnabled false
+            debuggable true
+            signingConfig signingConfigs.release
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each{ output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                if (variant.buildType.name.toLowerCase().contains('release')) {
+                    def versionCode = 1
+                    def versionName = '1.0.0'
+                    output.versionCodeOverride = versionCode
+                    output.versionNameOverride = versionName
+                    output.outputFileName = "Zygote_V${versionName}_${releaseTime()}-${buildType.name}.apk"
+                } else {
+                    output.outputFileName = "Zygote_V${variant.versionName}_${releaseTime()}-${buildType.name}.apk"
+                }
+            }
+        }
+    }
+}
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+static def buildTime() {
+    return new Date().format("yyyyMMdd")
+}
+
+def getVersionCode() {
+    def versionFile = file("version.properties")
+    if (versionFile.canRead()) {
+        Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionFile))
+        def versionCode = versionProps["VERSION_CODE"].toInteger()
+        versionProps["VERSION_CODE"] = (++versionCode).toString()
+        versionProps.store(versionFile.newWriter(), null)
+        return versionCode
+    } else {
+        return 1
+    }
+}
+
+//App 壳组件的配置和依赖
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation deps.support.multidex
+    implementation project(':bus_common')
+    implementation project(':module_main')
+
+    implementation deps.support.app_compat
+    implementation deps.kotlin.stdlib
+    implementation deps.constraint_layout
+
+    kapt deps.arouter_compiler
+    implementation "com.google.dagger:hilt-android:2.33-beta"
+    kapt "com.google.dagger:hilt-android-compiler:2.33-beta"
+
+
+    debugImplementation "com.didichuxing.doraemonkit:doraemonkit:$versions.doraemonKit"
+    releaseImplementation "com.didichuxing.doraemonkit:doraemonkit-no-op:$versions.doraemonKit"
+    checkImplementation "com.didichuxing.doraemonkit:doraemonkit:$versions.doraemonKit"
+//    debugImplementation "com.didichuxing.doraemonkit:doraemonkit-leakcanary:$versions.doraemonKit"
+}
+
+apply from: 'and_res_guard.gradle'
+

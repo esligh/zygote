@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="module_fun_socialize_share_wechat">微信</string>
+    <string name="module_fun_socialize_share_qq">QQ</string>
+    <string name="module_fun_socialize_share_wechat_moment">朋友圈</string>
+    <string name="module_fun_socialize_share_copy_link">复制链接</string>
+    <string name="module_fun_socialize_share_copy_link_success">链接已复制</string>
+
+    <string name="module_fun_socialize_wx_not_install">您没有安装微信，请安装后再试</string>
+    <string name="module_fun_socialize_qq_not_install">您没有安装QQ，请安装后再试</string>
+
+    <string name="module_fun_socialize_share_to">分享到</string>
+    <string name="module_fun_socialize_btn_cancel">取消</string>
+    <string name="module_fun_socialize_copy_link_success">链接已复制</string>
+
+</resources>

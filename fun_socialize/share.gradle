@@ -1,0 +1,37 @@
+// 分享 key
+def WEIXIN_APPID_xyds = "wx38a9bffb141c8549"
+def WEIXIN_APPSECRET_xyds = "9cb43364749eaf268c31c32246aafd67"
+
+def weixin_appid = WEIXIN_APPID_xyds
+def weixin_appsecret = WEIXIN_APPSECRET_xyds
+
+def qq_appIdd_xyds = "101927927"
+def qq_appkey_xyds = "4cab17489b2c2ab2ddbc687efb42e3bf"
+
+def qq_appId = qq_appIdd_xyds
+def qq_appKey = qq_appkey_xyds
+
+//分享 在MobSDK的扩展中注册ShareSDK的相关信息
+MobSDK {
+    appKey "3231cc1cf0f80"
+    appSecret "0b2ac858a98b7414d979c36a279a8467"
+
+    ShareSDK {
+        devInfo {
+            Wechat {
+                appId weixin_appid
+                appSecret weixin_appsecret
+            }
+            WechatMoments {
+                appId weixin_appid
+                appSecret weixin_appsecret
+            }
+            QQ {
+                appId qq_appId
+                appKey qq_appKey
+                bypassApproval false
+                shareByAppClient true
+            }
+        }
+    }
+}

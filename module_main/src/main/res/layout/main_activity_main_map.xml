@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainMapActivity">
+
+    <TextView
+        android:id="@+id/myLocationTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:text="My Location"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/getLocationTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:text="get Location"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/mapMarkerTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:text="MAP Marker"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/mapRouteTv"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_45"
+        android:background="@color/white"
+        android:text="MAP Route"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"/>
+</LinearLayout>

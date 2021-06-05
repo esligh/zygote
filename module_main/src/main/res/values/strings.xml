@@ -1,0 +1,8 @@
+<resources>
+    <string name="main_container_title">Zygote</string>
+    <string name="main_fun_module_list_title">功能组件列表</string>
+    <string name="main_bus_module_list_title">业务组件列表</string>
+    <string name="main_title_home">Home</string>
+    <string name="main_title_component">Component</string>
+    <string name="main_title_tools">Tools</string>
+</resources>

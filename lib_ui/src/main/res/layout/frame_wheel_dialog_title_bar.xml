@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@id/wheel_id_title_bar_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="12dp"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="12dp"
+        android:text="@android:string/cancel"
+        android:textColor="@color/text_gray"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@id/wheel_id_title_bar_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="12dp"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="12dp"
+        android:text="@android:string/ok"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/sp_15" />
+
+    <TextView
+        android:id="@id/wheel_id_title_bar_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_horizontal"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="12dp"
+        android:textColor="@color/wheel_title_bar_title_color"
+        android:textSize="@dimen/sp_15" />
+
+</FrameLayout>

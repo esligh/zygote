@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recycler_view_holder" type="id"/>
+
+    <!-- DeleteRecyclerView的默认id名 -->
+    <item name="item_layout" type="id"/>
+    <item name="item_delete" type="id"/>
+
+    <item type="id" name="scroll_height_by_keyboard"/>
+    <item type="id" name="bind_keyboard_2_editor"/>
+
+    <item type="id" name="anchor_view" />
+</resources>

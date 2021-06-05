@@ -1,0 +1,60 @@
+apply plugin: app_plugins.library
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug{
+
+        }
+        check{
+
+        }
+
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api deps.support.app_compat
+    api deps.support.v4
+    api deps.support.v13
+    api deps.support.design
+    api deps.support.cardview
+    api deps.support.recyclerview
+    api deps.paging
+    api deps.wheel_view
+    api deps.qmui
+
+    //tangram
+    api deps.tangram
+
+    implementation('com.alibaba.android:vlayout:1.2.31@aar') {
+        transitive = true
+    }
+
+    implementation('com.alibaba.android:virtualview:1.4.6@aar') {
+        transitive = true
+    }
+    implementation('com.alibaba.android:ultraviewpager:1.0.7.7@aar') {
+        transitive = true
+    }
+}

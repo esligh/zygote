@@ -1,0 +1,63 @@
+apply plugin: app_plugins.library
+apply plugin: app_plugins.kt_android
+apply plugin: app_plugins.kt_android_ext
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug{
+            manifestPlaceholders = [
+                    map_key: "ddcaa5e226e3aaba25b0237b935a9dbd"
+            ]
+        }
+        check{
+            manifestPlaceholders = [
+                    map_key: "ddcaa5e226e3aaba25b0237b935a9dbd"
+            ]
+        }
+        release {
+            manifestPlaceholders = [
+                    map_key: "ddcaa5e226e3aaba25b0237b935a9dbd"
+            ]
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    resourcePrefix 'module_fun_media'
+}
+
+dependencies {
+    api fileTree(dir: "libs", include: ["*.jar"])
+    api deps.kotlin.stdlib
+    api deps.support.app_compat
+    api deps.android_ktx
+
+    //3D地图so及jar
+    api 'com.amap.api:3dmap:7.8.0'
+    //定位功能
+    api 'com.amap.api:location:5.2.0'
+    //搜索功能
+    api 'com.amap.api:search:7.7.0'
+
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.test_runner
+    androidTestImplementation deps.test.espresso
+
+}

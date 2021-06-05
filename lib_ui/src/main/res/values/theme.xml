@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonTheme" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:background">@drawable/frame_primary_bt_round_corner_selector</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/frame_btn_text_size</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+    </style>
+
+    <style name="CardButtonTheme" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:background">@drawable/frame_custom_card_button_selector</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/frame_btn_text_size</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+    </style>
+
+</resources>

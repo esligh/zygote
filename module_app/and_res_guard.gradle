@@ -1,0 +1,70 @@
+apply plugin: 'AndResGuard'
+
+andResGuard {
+    mappingFile = null
+    use7zip = true
+    useSign = true
+    // 打开这个开关，会keep住所有资源的原始路径，只混淆资源的名字
+    keepRoot = false
+    // 设置这个值，会把arsc name列混淆成相同的名字，减少string常量池的大小
+//    fixedResName = "arg"
+    // 打开这个开关会合并所有哈希值相同的资源，但请不要过度依赖这个功能去除去冗余资源
+//    mergeDuplicatedRes = true
+
+    compressFilePattern = [
+            "*.png",
+            "*.jpg",
+            "*.jpeg",
+            "*.gif",
+    ]
+    whiteList = [
+            // your icon
+            "R.drawable.icon",
+            // for fabric
+            "R.string.com.crashlytics.*",
+            // for umeng update
+            "R.string.tb_*",
+            "R.layout.tb_*",
+            "R.drawable.tb_*",
+            "R.drawable.u1*",
+            "R.drawable.u2*",
+            "R.color.tb_*",
+            // umeng share for sina
+            "R.drawable.sina*",
+            // for google-services.json
+            "R.string.google_app_id",
+            "R.string.gcm_defaultSenderId",
+            "R.string.default_web_client_id",
+            "R.string.ga_trackingId",
+            "R.string.firebase_database_url",
+            "R.string.google_api_key",
+            "R.string.google_crash_reporting_api_key",
+
+            //友盟
+            "R.string.umeng*",
+            "R.string.UM*",
+            "R.layout.umeng*",
+            "R.drawable.umeng*",
+            "R.id.umeng*",
+            "R.anim.umeng*",
+            "R.color.umeng*",
+            "R.style.*UM*",
+            "R.style.umeng*",
+
+            //融云
+            "R.drawable.u*",
+            "R.drawable.rc_*",
+            "R.string.rc_*",
+            "R.layout.rc_*",
+            "R.color.rc_*",
+            "R.id.rc_*",
+            "R.style.rc_*",
+            "R.dimen.rc_*",
+            "R.array.rc_*"
+    ]
+
+    sevenzip {
+        artifact = 'com.tencent.mm:SevenZip:1.2.17'
+        //path = "/usr/local/bin/7za"
+    }
+}
