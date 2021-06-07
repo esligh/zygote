@@ -17,7 +17,6 @@ include ':bus_ui'
 include ':bus_db'
 
 //功能组件
-include ':fun_photo'
 include ':fun_media'
 include ':fun_map'
 include ':fun_socialize'

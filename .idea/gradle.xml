@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/fun_map" />
             <option value="$PROJECT_DIR$/fun_media" />
             <option value="$PROJECT_DIR$/fun_pay" />
-            <option value="$PROJECT_DIR$/fun_photo" />
             <option value="$PROJECT_DIR$/fun_socialize" />
             <option value="$PROJECT_DIR$/lib_common" />
             <option value="$PROJECT_DIR$/lib_config" />
@@ -35,6 +34,7 @@
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

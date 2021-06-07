@@ -51,9 +51,9 @@ public class ExceptionEngine {
             return ex;
         } else if (e instanceof ServerException){    //服务器返回的错误
             ServerException resultException = (ServerException) e;
-            ex = new ApiException(resultException, resultException.status);
-            ex.errorMessage = resultException.errorMsg;
-            ex.errorCode = resultException.errorCode;
+            ex = new ApiException(resultException, resultException.getStatus());
+            ex.errorMessage = resultException.getErrorMsg();
+            ex.errorCode = resultException.getErrorCode();
             return ex;
         } else if (e instanceof JsonParseException
                 || e instanceof JSONException
