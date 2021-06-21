@@ -10,7 +10,7 @@ import androidx.annotation.StringRes
  * 对于单布局的适配器对象，在构造时指定layoutId即可
  * 对于多布局方式，需要根据元素类型重载getItemLayout方法
  * */
-abstract class BaseNormalAdapter<T>(private val layoutId: Int = 0, var list: ArrayList<T> = ArrayList()) :
+abstract class BaseNormalAdapter<T>(private val layoutId: Int = 0, var list: MutableList<T> = ArrayList()) :
     androidx.recyclerview.widget.RecyclerView.Adapter<ViewHolder>() {
 
     lateinit var context: Context

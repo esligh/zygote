@@ -11,8 +11,7 @@ class ComponentFragment : FrameBaseFragment<EmptyViewModel>() {
 
     override fun getLayoutId(): Int = R.layout.main_fragment_component
 
-    override fun initView() {
-    }
+    override fun initView() {}
 
     override fun setListener() {
         funModuleTv.setOnClickListener {

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="main_title_view_behavior">com.yunzhu.module.ui.behavior.TitleBehavior</string>
+    <string name="main_fab_scale_behavior">com.yunzhu.module.ui.behavior.FabScaleBehavior</string>
+    <string name="main_fab_vertical_behavior">com.yunzhu.module.ui.behavior.FabVerticalBehavior</string>
+    <string name="main_bottom_view_behavior">com.yunzhu.module.ui.behavior.BottomBehavior</string>
+</resources>

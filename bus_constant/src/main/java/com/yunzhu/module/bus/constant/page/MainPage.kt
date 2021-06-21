@@ -17,4 +17,6 @@ object MainPage
     const val MAP_ROUTE = "/main/map_route"
 
     const val LOGIN = "/main/login"
+
+    const val BEHAVIOR = "/main/behavior"
 }
