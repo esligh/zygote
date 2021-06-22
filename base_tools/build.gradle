@@ -27,6 +27,16 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    resourcePrefix 'module_base_tools'
 }
 
 dependencies {
@@ -34,7 +44,14 @@ dependencies {
     api deps.kotlin.stdlib
     api deps.support.app_compat
     api deps.support.recyclerview
-    api deps.paging
+    api deps.android_ktx
+    api deps.constraint_layout
+
+    //paging
+    api deps.paging.runtime
+    api deps.paging.common
+
+    api deps.coil
 
     testImplementation deps.test.junit
     androidTestImplementation deps.test.test_runner

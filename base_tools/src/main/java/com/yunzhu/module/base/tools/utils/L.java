@@ -3,7 +3,8 @@ package com.yunzhu.module.base.tools.utils;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.yunzhu.module.config.BuildConfig;
+
+import com.yunzhu.module.base.tools.BuildConfig;
 
 import org.json.JSONArray;
 import org.json.JSONException;

@@ -21,5 +21,7 @@ class ComponentFragment : FrameBaseFragment<EmptyViewModel>() {
         busModuleTv.setOnClickListener {
             Router.goPage(Page.MainModule.BUS_MODULE_LIST)
         }
+
+
     }
 }

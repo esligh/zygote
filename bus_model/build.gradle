@@ -41,9 +41,8 @@ dependencies {
     api deps.support.app_compat
     api deps.gson
 
-    def room_version = "2.2.5"
-    api "androidx.room:room-rxjava2:$room_version"
-    api "androidx.room:room-runtime:$room_version"
-    kapt "androidx.room:room-compiler:$room_version"
-    api "androidx.room:room-ktx:$room_version"
+    api deps.room.rxjava
+    api deps.room.runtime
+    api deps.room.ktx
+    kapt deps.room.compiler
 }

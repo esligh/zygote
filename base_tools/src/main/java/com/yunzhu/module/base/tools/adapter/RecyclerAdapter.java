@@ -6,7 +6,8 @@ import android.view.ViewGroup;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yunzhu.module.config.R;
+
+import com.yunzhu.module.base.tools.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

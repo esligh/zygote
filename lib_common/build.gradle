@@ -41,10 +41,13 @@ dependencies {
     api deps.support.cardview
     api deps.support.recyclerview
     api deps.constraint_layout
-    api deps.paging
     api deps.lifecycle
     api deps.autodispose
     api deps.autodispose_android
+
+    //paging
+    api deps.paging.runtime
+    api deps.paging.common
 
     //kotlin
     api deps.kotlin.stdlib

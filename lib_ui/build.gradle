@@ -40,9 +40,12 @@ dependencies {
     api deps.support.design
     api deps.support.cardview
     api deps.support.recyclerview
-    api deps.paging
     api deps.wheel_view
     api deps.qmui
+
+    //paging
+    api deps.paging.runtime
+    api deps.paging.common
 
     //tangram
     api deps.tangram

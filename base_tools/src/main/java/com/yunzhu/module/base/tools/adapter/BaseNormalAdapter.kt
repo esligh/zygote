@@ -5,13 +5,15 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
 import androidx.annotation.StringRes
+import androidx.recyclerview.widget.DiffUtil
+
 /**
  * 通用的RecyclerView的适配器,支持多布局
  * 对于单布局的适配器对象，在构造时指定layoutId即可
  * 对于多布局方式，需要根据元素类型重载getItemLayout方法
  * */
 abstract class BaseNormalAdapter<T>(private val layoutId: Int = 0, var list: MutableList<T> = ArrayList()) :
-    androidx.recyclerview.widget.RecyclerView.Adapter<ViewHolder>() {
+    RecyclerView.Adapter<ViewHolder>() {
 
     lateinit var context: Context
 
@@ -49,25 +51,12 @@ abstract class BaseNormalAdapter<T>(private val layoutId: Int = 0, var list: Mut
         notifyDataSetChanged()
     }
 
-    fun addData(data: ArrayList<T>) {
-        if (data.isEmpty()) {
-            return
-        }
-
-        val size = list.size
+    fun setData(data: MutableList<T>, diffCallback: DiffUtil.Callback)
+    {
+        val diffResult = DiffUtil.calculateDiff(diffCallback)
+        list.clear()
         list.addAll(data)
-        notifyItemRangeInserted(size, data.size)
-    }
-
-    fun removeItem(position: Int) {
-        list.removeAt(position)
-        notifyItemRemoved(position)
-    }
-
-    fun addItem(data: T) {
-        val size = list.size
-        list.add(data)
-        notifyItemInserted(size)
+        diffResult.dispatchUpdatesTo(this)
     }
 
     fun clear() {

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">lib_config</string>
+
+    <string name="module_base_tools_tools_load_retry">加载失败，请点击重试</string>
 </resources>
